@@ -1,0 +1,19 @@
+{
+  "name": "sb-companion",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.24.0",
+    "docker-event-emitter": "^0.3.0",
+    "dotenv": "^10.0.0",
+    "mongoose": "^6.2.1",
+    "public-ip": "^4.0.4"
+  }
+}
