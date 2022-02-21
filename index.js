@@ -79,7 +79,7 @@ const checkIfARecordExists = async (key, settings) => {
                     name: subdomain,
                     content: await publicIp.v4(),
                     ttl: 1,
-                    proxied: true,
+                    proxied: false,
                   },
                   headers: {
                     "X-Auth-Email": settings.email,
