@@ -36,7 +36,7 @@ const checkIfARecordExists = async (key, settings) => {
 };
 
 const addDefaultARecords = async (settings) => {
-  ["auth", "traefik"].forEach((record) => {
+  ["auth", "traefik"].forEach(async (record) => {
     try {
       await axios({
         method: "POST",
