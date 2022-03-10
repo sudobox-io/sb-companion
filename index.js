@@ -22,7 +22,7 @@ const checkIfARecordExists = async (key, settings) => {
 
   const existingRecords = await axios({
     method: "GET",
-    url: `https://api.cloudflare.com/client/v4/zones/${settings.zoneId}/dns_records?name=${key}.${settings.domain}`,
+    url: `https://api.cloudflare.com/client/v4/zones/${settings.zoneId}/dns_records?name=${key}.${settings.domain.valye}`,
     headers: {
       "X-Auth-Email": settings.email,
       "X-Auth-Key": settings.api,
@@ -36,7 +36,7 @@ const checkIfARecordExists = async (key, settings) => {
 };
 
 const addDefaultARecords = async (settings) => {
-  ["auth", "traefik"].forEach(async (record) => {
+  ["auth", "traefik", "ldapadmin"].forEach(async (record) => {
     try {
       await axios({
         method: "POST",
